@@ -1,7 +1,7 @@
-pub(crate) use self::inner::{do_alloc, Allocator, Global};
+pub use self::inner::{do_alloc, Allocator, Global};
 
 #[cfg(feature = "nightly")]
-mod inner {
+pub mod inner {
     use crate::alloc::alloc::Layout;
     pub use crate::alloc::alloc::{Allocator, Global};
     use core::ptr::NonNull;
